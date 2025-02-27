@@ -6,11 +6,14 @@
         <artifactId>QY-IM</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+    <description>Im Feign接口Pom</description>
+    <modules>
+        <module>im-user-feign</module>
+    </modules>
+    <artifactId>im-feign-all</artifactId>
+    <packaging>pom</packaging>
 
-    <artifactId>im-auth-service</artifactId>
-    <packaging>jar</packaging>
-
-    <name>im-auth-server</name>
+    <name>im-feign-all</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -18,13 +21,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
+
     </dependencies>
 </project>

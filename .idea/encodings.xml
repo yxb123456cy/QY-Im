@@ -5,12 +5,20 @@
     <file url="file://$PROJECT_DIR$/im-auth-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-chat-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-chat-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-feign-all/im-user-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-feign-all/im-user-feign/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-feign-all/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-feign-all/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-file-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-file-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-gateway-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-gateway-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-group-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-group-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-logs-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-logs-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-settings-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-settings-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-user-service/src/main/java" charset="UTF-8" />

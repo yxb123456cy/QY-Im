@@ -26,6 +26,8 @@
         <module>im-chat-service</module>
         <module>im-group-service</module>
         <module>im-logs-service</module>
+        <module>im-common</module>
+        <module>im-feign-all</module>
     </modules>
     <properties>
         <maven.compiler.source>19</maven.compiler.source>

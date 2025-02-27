@@ -2,11 +2,11 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="im-chat-service" />
       </profile>
       <profile name="Annotation profile for QY-IM" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -18,9 +18,13 @@
         <module name="im-settings-service" />
         <module name="im-user-service" />
         <module name="im-file-service" />
+        <module name="im-logs-service" />
         <module name="im-gateway-service" />
+        <module name="im-chat-service" />
         <module name="im-group-service" />
+        <module name="im-common" />
         <module name="im-auth-service" />
+        <module name="im-user-feign" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
