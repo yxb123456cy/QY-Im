@@ -9,7 +9,7 @@
 
     <artifactId>im-gateway-service</artifactId>
     <packaging>jar</packaging>
-
+    <description>IM项目 核心服务之一网关服务</description>
     <name>im-gateway-service</name>
     <url>http://maven.apache.org</url>
 

@@ -9,7 +9,7 @@
 
     <artifactId>im-chat-service</artifactId>
     <packaging>jar</packaging>
-
+    <description>IM项目 核心服务之一对话服务</description>
     <name>im-chat-service</name>
     <url>http://maven.apache.org</url>
 
@@ -19,10 +19,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
     </dependencies>
 </project>

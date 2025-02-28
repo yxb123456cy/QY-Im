@@ -23,7 +23,7 @@ spring:
     consul:
       config:
         enabled: false   # 取消使用Consul Config
-      host:  #consul注册地址
+      host: 117.72.45.14 #consul注册地址
       port: 8500 #consul注册地址的端口，8500是默认端口
       discovery:
         heartbeat:

@@ -17,12 +17,12 @@
         </processorPath>
         <module name="im-settings-service" />
         <module name="im-user-service" />
-        <module name="im-file-service" />
         <module name="im-logs-service" />
+        <module name="im-file-service" />
         <module name="im-gateway-service" />
         <module name="im-chat-service" />
-        <module name="im-group-service" />
         <module name="im-common" />
+        <module name="im-group-service" />
         <module name="im-auth-service" />
         <module name="im-user-feign" />
       </profile>
