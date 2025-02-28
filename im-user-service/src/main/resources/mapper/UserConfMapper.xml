@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qy.im.mapper.UserConfMapper">
+
+    <resultMap id="BaseResultMap" type="com.qy.im.domain.UserConf">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="masterid" column="masterID" jdbcType="BIGINT"/>
+            <result property="recallmessage" column="RecallMessage" jdbcType="VARCHAR"/>
+            <result property="friendonline" column="FriendOnline" jdbcType="TINYINT"/>
+            <result property="sound" column="sound" jdbcType="TINYINT"/>
+            <result property="securelink" column="SecureLink" jdbcType="TINYINT"/>
+            <result property="savepwd" column="savePwd" jdbcType="TINYINT"/>
+            <result property="searchmyway" column="searchMyWay" jdbcType="INTEGER"/>
+            <result property="verification" column="Verification" jdbcType="INTEGER"/>
+            <result property="online" column="Online" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,masterID,RecallMessage,
+        FriendOnline,sound,SecureLink,
+        savePwd,searchMyWay,Verification,
+        Online
+    </sql>
+</mapper>

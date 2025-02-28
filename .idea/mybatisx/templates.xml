@@ -70,8 +70,20 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="User" />
-                  <option name="tableName" value="user" />
+                  <option name="className" value="Friend" />
+                  <option name="tableName" value="friend" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Friendverify" />
+                  <option name="tableName" value="friendverify" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="UserConf" />
+                  <option name="tableName" value="user_conf" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Verificationquestion" />
+                  <option name="tableName" value="verificationquestion" />
                 </TableUIInfo>
               </list>
             </option>
