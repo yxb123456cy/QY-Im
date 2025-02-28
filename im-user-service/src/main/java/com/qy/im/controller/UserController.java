@@ -1,5 +1,6 @@
 package com.qy.im.controller;
 
+import cn.hutool.core.util.ObjectUtil;
 import com.qy.im.domain.User;
 import com.qy.im.dtos.*;
 import com.qy.im.response.Response;
@@ -16,6 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 @Slf4j
+@CrossOrigin("*")
 @RequiredArgsConstructor
 public class UserController {
     private final UserService userService;
@@ -49,6 +51,7 @@ public class UserController {
     public Response<Boolean> saveVerifyQuestion(@RequestBody VerifyCationQuestionAddDTO verifyCationQuestionAddDTO) {
         return userService.saveVerifyQuestion(verifyCationQuestionAddDTO);
     }
+
     //获取好友列表;
     @GetMapping("/getFriendList")
     public Response<List<User>> getFriendList(@RequestParam("masterId") Long masterId) {
@@ -101,6 +104,14 @@ public class UserController {
     @PostMapping("/updateUserConf")
     public Response<Boolean> updateUserConf(@RequestBody ChangeUserConfDTO changeUserConfDTO) {
         return null;
+    }
+
+
+    //feign接口;
+    @PostMapping("/userExists")
+    public Response<Boolean> userExists(@RequestParam("userID") Long userId) {
+        User user = userService.getById(userId);
+        return Response.success(ObjectUtil.isNotNull(user));
     }
 
 

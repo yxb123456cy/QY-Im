@@ -1,0 +1,11 @@
+D:\001轻叶毕设项目\QY-Im\QY-Im\im-auth-service\src\main\java\com\qy\im\AuthApplication.java
+D:\001轻叶毕设项目\QY-Im\QY-Im\im-auth-service\src\main\java\com\qy\im\controller\AuthController.java
+D:\001轻叶毕设项目\QY-Im\QY-Im\im-auth-service\src\main\java\com\qy\im\vos\UserLoginRespVO.java
+D:\001轻叶毕设项目\QY-Im\QY-Im\im-auth-service\src\main\java\com\qy\im\service\AuthService.java
+D:\001轻叶毕设项目\QY-Im\QY-Im\im-auth-service\src\main\java\com\qy\im\domain\User.java
+D:\001轻叶毕设项目\QY-Im\QY-Im\im-auth-service\src\main\java\com\qy\im\service\impl\AuthServiceImpl.java
+D:\001轻叶毕设项目\QY-Im\QY-Im\im-auth-service\src\main\java\com\qy\im\feign\UserFeign.java
+D:\001轻叶毕设项目\QY-Im\QY-Im\im-auth-service\src\main\java\com\qy\im\config\MyBatisPlusConfig.java
+D:\001轻叶毕设项目\QY-Im\QY-Im\im-auth-service\src\main\java\com\qy\im\dtos\UserLoginDTO.java
+D:\001轻叶毕设项目\QY-Im\QY-Im\im-auth-service\src\main\java\com\qy\im\mapper\UserMapper.java
+D:\001轻叶毕设项目\QY-Im\QY-Im\im-auth-service\src\main\java\com\qy\im\config\RedisConfig.java

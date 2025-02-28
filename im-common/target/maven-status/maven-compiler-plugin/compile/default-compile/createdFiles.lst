@@ -1,0 +1,4 @@
+com\qy\im\response\Response.class
+com\qy\im\exception\BizException.class
+com\qy\im\utils\JsonUtils.class
+com\qy\im\exception\BaseExceptionInterface.class

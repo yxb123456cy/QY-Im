@@ -23,13 +23,13 @@ spring:
     consul:
       config:
         enabled: false   # 取消使用Consul Config
-      host:  #consul注册地址
+      host: localhost #consul注册地址
       port: 8500 #consul注册地址的端口，8500是默认端口
       discovery:
         heartbeat:
           enabled: true
         enabled: true #启用服务发现
-        instance-id: im-auth-service001
+        instance-id: ${spring.application.name}-${server.port}-${random.long}
         service-name: im-auth-service
         port: 9098 # 服务端口
         register: true

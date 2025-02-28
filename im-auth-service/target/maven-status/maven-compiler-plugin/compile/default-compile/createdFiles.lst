@@ -1,0 +1,11 @@
+com\qy\im\controller\AuthController.class
+com\qy\im\feign\UserFeign.class
+com\qy\im\dtos\UserLoginDTO.class
+com\qy\im\mapper\UserMapper.class
+com\qy\im\service\impl\AuthServiceImpl.class
+com\qy\im\config\MyBatisPlusConfig.class
+com\qy\im\AuthApplication.class
+com\qy\im\config\RedisConfig.class
+com\qy\im\vos\UserLoginRespVO.class
+com\qy\im\domain\User.class
+com\qy\im\service\AuthService.class

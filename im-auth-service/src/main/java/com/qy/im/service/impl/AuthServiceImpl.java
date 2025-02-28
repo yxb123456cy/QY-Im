@@ -79,6 +79,7 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public Response<UserLoginRespVO> authCheck() {
         String tokenValue = StpUtil.getTokenValue();
+        log.info("tokenValue:{}",tokenValue);
         boolean login = StpUtil.isLogin();
         Boolean aBoolean = redisTemplate.boundSetOps(LOGOUT_TOKEN_CACHE).isMember(tokenValue);
         if (aBoolean != null) {

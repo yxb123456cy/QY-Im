@@ -1,0 +1,109 @@
+
+spring:
+  data:
+    redis:
+      port: 6379
+      host: localhost
+      database: 6
+      timeout: 2s
+      lettuce:
+        pool:
+          # 连接池最大连接数
+          max-active: 200
+          # 连接池最大阻塞等待时间（使用负值表示没有限制）
+          max-wait: -1ms
+          # 连接池中的最大空闲连接
+          max-idle: 10
+          # 连接池中的最小空闲连接
+          min-idle: 2
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/my_im
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid: # Druid 连接池
+      initial-size: 5 # 初始化连接池大小
+      min-idle: 5 # 最小连接池数量
+      max-active: 20 # 最大连接池数量
+      max-wait: 60000 # 连接时最大等待时间（单位：毫秒）
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000 # 配置多久进行一次检测，检测需要关闭的连接（单位：毫秒）
+      min-evictable-idle-time-millis: 300000 # 配置一个连接在连接池中最小生存的时间（单位：毫秒）
+      max-evictable-idle-time-millis: 900000 # 配置一个连接在连接池中最大生存的时间（单位：毫秒）
+      validation-query: SELECT 1 FROM DUAL # 配置测试连接是否可用的查询 sql
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      web-stat-filter:
+        enabled: true
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/* # 配置监控后台访问路径
+        login-username: admin # 配置监控后台登录的用户名、密码
+        login-password: admin
+      filter:
+        stat:
+          enabled: true
+          log-slow-sql: true # 开启慢 sql 记录
+          slow-sql-millis: 1000 # 若执行耗时大于 1s，则视为慢 sql
+          merge-sql: true
+        wall: # 防火墙
+          config:
+            multi-statement-allow: true
+  application:
+    name: im-chat-service
+
+  rabbitmq:
+    port: 5672
+    host: localhost
+    username: rabbitmq
+    password: rabbitmq
+    #这个配置是保证提供者确保消息推送到交换机中，不管成不成功，都会回调
+    publisher-confirm-type: correlated
+    #保证交换机能把消息推送到队列中
+    publisher-returns: true
+    virtual-host: /
+    #这个配置是保证消费者会消费消息，自动确认
+    listener:
+      simple:
+        default-requeue-rejected: true # 不丢弃
+        acknowledge-mode: auto
+        retry:
+          enabled: true # 开启消费者进行重试
+          max-attempts: 2 # 最大重试次数
+          initial-interval: 1500 # 重试时间间隔
+  cloud:
+    consul:
+      host: localhost #consul注册地址
+      port: 8500 #consul注册地址的端口，8500是默认端口
+      discovery:
+        heartbeat:
+          enabled: true
+        enabled: true #启用服务发现
+        instance-id: ${spring.application.name}-${server.port}-${random.long}
+        service-name: im-chat-service
+        port: 9898 # 服务端口
+        register: true
+        prefer-ip-address: true
+        deregister: true
+        ip-address: ${spring.cloud.client.ip-address}
+
+mongo-plus:
+  data:
+    mongodb:
+      host: localhost   #ip
+      port: 27017   #端口
+      database: IM    #数据库名
+      username: root    #用户名，没有可不填（若账号中出现@,!等等符号，不需要再进行转码！！！）
+      password: root    #密码，同上（若密码中出现@,!等等符号，不需要再进行转码！！！）
+      authenticationDatabase: admin     #验证数据库
+      connectTimeoutMS: 50000   #在超时之前等待连接打开的最长时间（以毫秒为单位）
+  log: true
+  format: true
+  pretty: true
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

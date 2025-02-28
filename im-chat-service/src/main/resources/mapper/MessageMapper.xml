@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qy.im.mapper.MessageMapper">
+
+    <resultMap id="BaseResultMap" type="com.qy.im.domain.Message">
+            <id property="messageID" column="messageID" jdbcType="VARCHAR"/>
+            <result property="masterID" column="masterID" jdbcType="BIGINT"/>
+            <result property="friendID" column="friendID" jdbcType="BIGINT"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="date" column="sendTime" jdbcType="DATE"/>
+            <result property="readStatus" column="readStatus" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        messageID,masterID,friendID,
+        content,sendTime,readStatus
+    </sql>
+</mapper>
